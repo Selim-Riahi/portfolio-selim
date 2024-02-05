@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  /* font-family: "Poppins", sans-serif; */
+}
+* a,
+a:checked,
+:active {
+  color: rgb(91, 88, 83);
+}
+body {
+  /* background-color: #212529; */
+  background: linear-gradient(
+    90deg,
+    rgba(11, 11, 11, 1) 0%,
+    rgba(19, 20, 20, 1) 26%,
+    rgba(49, 50, 43, 1) 100%
+  );
+}
+.containerTopLeft {
+  position: absolute;
+  left: 80px;
+  top: 180px;
+}
+.containerTopRight {
+  position: absolute;
+  right: 300px;
+  top: 150px;
+}
+.containerBottomLeft {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+}
+.containerBottomLeft-skills {
+  position: absolute;
+  left: 150px;
+  bottom: -55rem;
+}
+.containerTopRight-skills {
+  position: absolute;
+  right: 100px;
+  top: -30.5;
+}
+.containerBottomRight {
+  position: absolute;
+  right: 200px;
+  bottom: 50px;
+}
+.containerBottomRight-skills {
+  position: absolute;
+  right: 10rem;
+  bottom: -30rem;
+}
+
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 25px rgba (255, 255, 255, 0.25);
+  animation: animate_4010 8s ease infinite;
+}
+
+.bubble:nth-child(2) {
+  position: relative;
+  zoom: 0.45;
+  left: -10px;
+  top: -100px;
+  animation-delay: -4s;
+}
+
+.bubble:nth-child(3) {
+  position: relative;
+  zoom: 0.45;
+  right: -80px;
+  top: -300px;
+  animation-delay: -6s;
+}
+
+.bubble:nth-child(4) {
+  position: relative;
+  zoom: 0.35;
+  left: -120px;
+  bottom: -200px;
+  animation-delay: -3s;
+}
+
+.bubble:nth-child(5) {
+  position: relative;
+  zoom: 0.5;
+  left: 0px;
+  top: 200px;
+  animation-delay: -5s;
+}
+
+@keyframes animate_4010 {
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.bubble::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+
+.bubble span {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bubble span:nth-child(1) {
+  inset: 10px;
+  border-left: 15px solid rgb(94, 94, 189);
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(2) {
+  inset: 10px;
+  border-right: 15px solid rgb(94, 94, 189);
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(3) {
+  inset: 10px;
+  border-top: 15px solid rgb(94, 94, 189);
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(4) {
+  inset: 30px;
+  border-left: 15px solid #ff4484;
+  filter: blur(12px);
+}
+
+.bubble span:nth-child(5) {
+  inset: 10px;
+  border-bottom: 10px solid #fff;
+  filter: blur(8px);
+  transform: rotate(330deg);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(
+    170deg,
+    rgba(58, 56, 56, 0.623) 0%,
+    rgb(31, 31, 31) 100%
+  );
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card_box:hover {
+  transform: scale(0.9);
+}
+
+.card_box span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box span::before {
+  content: "Premium";
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(
+    45deg,
+    #ff6547 0%,
+    #ffb144 51%,
+    #ff7053 100%
+  );
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+}
+
+.card_box span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+.cardsWrapperSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.sliderContainer {
+  width: 100%;
+  height: 60vh;
+}
+.carousel {
+  margin-top: 2rem;
+  padding: 5rem 0;
+}
+.formContainer {
+  width: 50%;
+  height: 60vh;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 11, 11, 1) 0%,
+    rgba(19, 20, 20, 1) 26%,
+    rgba(49, 50, 43, 1) 100%
+  );
+  margin-top: 3rem;
+  display: flex;
+}
+.formContainer .myContact {
+  flex: 1;
+  background-color: rgba(20, 20, 27, 0.732);
+
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.formContainer .yourContact {
+  background-color: rgba(40, 39, 37, 0.996);
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formContainer .yourContact input {
+  width: 40%;
+  height: 10%;
+  outline: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.592);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-left: 2rem;
+}
+.formcontainer .yourcontact input: {
+  background-color: rgba(0, 0, 0, 0.592);
+}
+.formContainer .yourContact input::placeholder {
+  text-align: center;
+  padding-left: -2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+
+.myContact__icons {
+  width: 100%;
+  display: flex;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+}
+.fa-facebook {
+  color: rgb(17, 17, 160);
+}
+.fa-linkedin {
+  color: rgba(45, 210, 218, 0.662);
+}
+.fa-instagram {
+  color: #ff4484;
+}
+.myContact__icons a {
+  transition: 0.8s ease;
+}
+.myContact__icons a:hover {
+  transform: scale(1.3);
+}
+#email {
+  width: 50%;
+}
+
+.p {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  height: 10%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+select {
+  outline: none;
+  background-color: rgba(32, 30, 30, 0.836);
+  border: none;
+  color: white;
+  width: 10rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}

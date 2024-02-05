@@ -1,0 +1,14 @@
+.sliderItemContainer {
+  width: 100%;
+  height: 80vh;
+  /* background-color: rgba(229, 227, 227, 0.015); */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+.sliderItemContainer img {
+  border-radius: 12%;
+}

@@ -1,0 +1,11 @@
+.title {
+  font-family: sans-serif;
+  color: rgb(94, 94, 189);
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-weight: bold;
+}
+.subtitle {
+  color: rgb(233, 226, 217);
+}
